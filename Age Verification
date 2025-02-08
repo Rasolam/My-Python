@@ -1,0 +1,12 @@
+#Age Verification Exercise
+
+#Variable asking user to type age
+age = input("What is your age? ")
+# Converts the age variable to an integer
+age = int(age)
+
+#If statement to check if they are over 18
+if age <= 17:
+    print("You are not old enough!")
+else:
+        print(age)
