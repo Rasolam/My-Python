@@ -1,0 +1,26 @@
+#String Formatting
+
+
+# %s converts to string
+cost = 50
+items = 3
+total_cost = cost * items
+
+print("Total is: %s" % total_cost)
+
+
+# %d converts to integer
+cost1 = 50
+items1 = 3
+total_cost1 = cost * items
+
+print("Total is: %d" % total_cost1)
+
+# %f converts to float
+
+cost2 = 50
+items2 = 3
+total_cost2 = cost * items
+
+print("Total is: %f" % total_cost2)
+
