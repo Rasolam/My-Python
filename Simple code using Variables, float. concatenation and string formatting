@@ -1,0 +1,10 @@
+#Simple code using:-
+#Variables, float, concatenation and string formatting
+
+venue_cost = float(300)
+catering_cost = float(5099)
+entertainment_cost = float(1000)
+
+total_cost = venue_cost + catering_cost + entertainment_cost
+
+print(f"Total cost is:{total_cost}")
