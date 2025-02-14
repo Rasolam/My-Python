@@ -1,0 +1,120 @@
+#Old World Main App V1
+#WHAT DO U WANT IT TO DO?
+#
+#ADD STEPS IN COMMENTS
+#
+#COMMENT THE CODE 
+#
+#Create Window
+##Uses import  - imports the TKINTER library
+### also imports some functions from tkinter - messagebox, ttk,
+
+import tkinter as Tk
+
+from tkinter import * 
+from tkinter.ttk import *
+from time import strftime
+from  tkinter import *
+from tkinter.messagebox import *
+
+##Create Main Window
+
+#master is variable for TK i imported
+master = Tk()
+#sets the size of the Window
+master.geometry("750x350")
+#Add a title on the Window top left 
+master.title("Old World Tracker")
+
+########START OF FUNCTION##################
+# Main code block will run after function
+
+
+
+#Create and open new window function
+def openNewWindow():
+    newWindow = Toplevel(master)
+    newWindow.title("Balistic Checker")
+    #newWindow.geometry("750x350")
+    newWindow.geometry("1240x750")
+
+    Label(newWindow,
+          text= "This is a new Window").pack()
+
+Label = Label(master,
+              text= "Welcome to The Old World Tracker")
+Label.pack(pady = 10)
+#Name the button will display
+#IMPORTANT  - opens window which will run mian blocks of code
+btn = Button(master,
+             text= "Balistic Checker",
+             command= openNewWindow)
+
+##Default placement of button
+##btn.pack(pady= 10)
+
+###Place the button in a specfic place
+btn.place(x=100,y=100)
+
+
+########END OF FUNCTION###########################
+
+
+########START OF FUNCTION##################
+import tkinter as Tk
+
+from tkinter import * 
+from tkinter.ttk import *
+from time import strftime
+from  tkinter import *
+from tkinter.messagebox import *
+
+
+#Create and open new window function
+def openNewWindow2():
+    newWindow = Toplevel(master)
+    newWindow.title("second window tst")
+    newWindow.geometry("750x350")
+    #newWindow.geometry("1240x750")
+
+    Label(newWindow,
+          text= "second window tes").pack()
+
+Label = Label(master,
+              text= "second function test")
+Label.pack(pady = 10)
+
+# Name the Button will display
+# IMPORTANT - this wil open another form 
+# Main code block will run after function
+btn2 = Button(master,
+             text= "second func test",
+             command= openNewWindow2)
+
+##Default placement of button
+##btn.pack(pady= 10)
+
+###Place the button in a specfic place
+btn2.place(x=300,y=100)
+
+
+########END OF FUNCTION###########################
+
+##ADD A NEW BUTTON TO OPEN AN NEW WINDOW
+##add a messagebox
+
+
+
+#########################
+
+#what do u wantr the code to do next
+
+
+
+##############################
+
+
+mainloop()
+
+##############################
+
