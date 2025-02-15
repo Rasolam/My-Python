@@ -1,0 +1,9 @@
+## My First function
+
+
+##use def then a name parenth semi
+def My_first_Function ():
+    
+    print("My first Function") ##<----What do yo want the function to do
+
+My_first_Function()  ## <-----Run the function
