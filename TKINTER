@@ -1,0 +1,170 @@
+## TKINTER Breakdown of how it works
+## USE THIS FOR BUILDING NEW APPS
+
+
+## The root window has a title that defaults to tk. 
+## It also has three system buttons including Minimize, Maximize, and Close.
+
+
+
+## To change the window’s title, you use the title() method like this:
+    # window.title(new_title)
+
+
+## REMEMBER ---- TKINTER AND TTK ARE DIFFERENT
+## TKINTER IS STANDARD
+## TTK IS ADVANCED WITH EXTRA SETTINGS
+
+## Imports TKINTER as tk
+import tkinter as tk
+from tkinter import ttk
+from tkinter import Label
+from PIL import ImageTk
+from PIL import Image
+from tkinter import PhotoImage
+import os
+from tkinter import Tk, Text
+from tkinter import Button
+from time import strftime
+
+
+## root is the main window
+root = tk.Tk()
+
+## Root (main windo) title is changing the name of the main window
+root.title('TKINTER Learning')
+
+## In Tkinter, the position and size of a window on the screen is determined by its geometry.
+## The following shows the geometry specification:
+## To change the size and position of a window, you use the geometry() method:
+
+    # widthxheight±x±y
+##In this specification:
+
+## The width represents the window’s width in pixels.
+## The height represents the window’s height in pixels.
+## The x parameter denotes the window’s horizontal position. For example, 
+## a value of +50 signifies the left edge of the window should be positioned 50 pixels from the left edge of the screen. 
+## Conversely, a value of -50 indicates the right edge of the window should be 50 pixels from the right edge of the screen.
+## The y paremeter denotes the window’s vertical position. For example, a value of +50 signifies the top edge of the 
+## window should be positioned 50 pixels below the top of the screen. Conversely, a value of -50 indicates the bottom edge 
+## of the window should be 50 pixels above the bottom of the screen.
+
+
+root.geometry('800x700+50+50')
+
+
+
+## RESIZING
+## By default, you can resize the width and height of a window. To prevent the window from resizing, you can use the resizable() method:
+    # CODE = window.resizable(width,height)
+
+## The resizable() method has two parameters that specify whether the width and height of the window can be resizable.
+## The following shows how to make the window with a fixed size:
+
+    # import tkinter as tk
+    # root = tk.Tk()
+    # root.title('Tkinter Window Demo')
+    # root.geometry('600x400+50+50')
+    # root.resizable(False, False)
+    # root.mainloop()
+
+
+## When a window is resizable, you can specify the minimum and maximum sizes using the minsize() and maxsize() methods:
+    # window.minsize(min_width, min_height)
+    # window.maxsize(min_height, max_height)
+
+## PERSONAL note
+## setting either of the true below will prevent either the width or height from being re sizable
+root.resizable(True, True)
+
+## Change the backgrounbd colour of the main window
+root.configure(background= "green")
+
+
+
+
+
+
+# CHANGING THE ICON ON THE MAIN FORM
+
+## Tkinter window displays a default icon. To change this default icon, you follow these steps:
+## Prepare an image in the .ico format. If you have the image in other formats like png or jpg, 
+## you can convert it to the .ico format. There are many online tools that allow you to do it quite easily.
+## Place the icon in a folder that can be accessible from the program.
+## Call the iconbitmap() method of the window object.
+## The following program illustrates how to change the default icon to a new one:
+
+## code disabled as no image yet
+    # root.iconbitmap('ENTER PATH TO IMAGE HERE.ico')
+
+
+
+## Adding a label
+
+Label = ttk.Label(root,
+    text='Window learning',
+    font=("times new roman", 15))
+Label.pack(pady=10)
+
+        ####### Note that the Text widget is only available in the Tkinter module, not the Tkinter.ttk module. ##########
+
+## Adding text box
+## Inserting initial content
+## To insert contents into the text area, you use the insert() method. For example:
+##
+
+
+text = Text(root, height= 12) ### height means how many lines in text box eg 12 return button clicks
+## Adds the text box to main window
+text.pack()
+text.insert('1.0', 'Liams text box test') ### In this example, '1.0' means line 1, character 0, which is the first character of the first line on the text area
+
+
+
+## add a button
+## syntax - button = ttk.Button(master, text, command)
+## button variable =
+##  ttk. button 
+## In this syntax:
+## The master is the parent widget on which you place the button.
+## The text is the label of the button.
+## The command specifies a callback function that will be called automatically when the button is clicked.
+## using a function to create a new window with a button click
+
+
+
+
+def OpenNewWindow ():
+    newwindow = tk.Toplevel(root)
+    newwindow.title = "Button Window"
+    newwindow.geometry ("700x700")
+    newwindow.configure (background= "blue")
+    
+
+   
+    
+
+
+Label = ttk.Label(root,
+    text=f'Click the below button!',
+    font=("times new roman", 15))
+Label.pack(pady=20)
+Label.place(x= 20, y= 450)
+
+
+
+
+## Button opens new window on clck
+
+open_new_form = Button (root, text= "Click me",
+                       command= OpenNewWindow)
+
+open_new_form.place(x=20 ,y=500)
+
+
+
+
+## RootMainloop needs to be at the end of code
+## root (main window) main loop keeps the window open until manually closed
+root.mainloop()
