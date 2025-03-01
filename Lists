@@ -1,0 +1,130 @@
+## Lists
+## Syntax - [] square brakets
+
+
+## Example
+
+my_list = ["warhammer","40k","old world"]
+
+
+print(my_list)
+
+# Check a lists length
+# Shows 3 items in the list
+
+my_list2 = ["warhammer","40k","old world"]
+
+print(len(my_list2))
+
+## To insert a new list item, without replacing any of the existing values, we can use the insert() method.
+# The insert() method inserts an item at the specified index:
+# 
+# Example
+# The below code will insert watermelon where cherry is becoming num 2 in index. cherry then becomes index 3
+
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+
+
+##  Changing values ina list.
+# To change the value of a specific item, refer to the index number:
+
+# The below example refers to variable thislist and index 1 which is bannana
+# we then = blackcurrent replacing bannana
+# Example
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+
+
+## To change the value of items within a specific range, define a list with the new values, 
+# and refer to the range of index numbers where you want to insert the new values:
+# example
+
+thislist2 = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist2[1:3] = ["blackcurrant", "watermelon"]
+print(thislist2)
+
+
+####--REMEMBER--####
+# If you insert more items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly:
+# example
+
+thislist3 = ["apple", "banana", "cherry"]
+thislist3[1:2] = ["blackcurrant", "watermelon"]
+print(thislist3)
+
+## APPEND ITEMS
+#  To add an item to the end of the list, use the append() method:
+# The below code will use append to add orange at the end of the list
+# Example
+ 
+
+my_list = ["warhammer","40k","old world"]
+my_list.append("orange")
+
+print(my_list)
+
+
+## INSERT
+# To insert a list item at a specified index, use the insert() method.
+# The insert() method inserts an item at the specified index:
+# Example
+
+my_list2 = ["warhammer","40k","old world"]
+my_list2.insert(2,"heroquest")
+
+print(my_list2)
+
+
+## EXTEND
+# To append elements from another list to the current list, use the extend() method.
+# extend allows you to add another variable containing alist and adds it on to first list
+# The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.)
+# Example
+
+my_list3 =["warhammer","40k","old world"]
+best_game =["lotr","mesbg","ww2"]
+my_list3.extend(best_game)
+print(my_list3)
+
+## accessing list items
+
+## accessing lists are done by reffering to index number
+# lists are indexed starting from 0 (zero)
+# Displays 40k as this is number 1 in the list. Warhammer is 0 and old world is 2
+# Example
+
+my_list = ["warhammer","40k","old world"]
+
+print(my_list[1])
+
+### Negative indexing
+# Negative indexing is the same as normal except it starts from the end and works back
+# Think of it as an excel right function
+# Example
+
+my_list2 = ["warhammer","40k","old world"]
+
+print(my_list2[-1])
+
+## Range Indexing
+# You can specify a range of indexes by specifying where to start and where to end the range.
+# When specifying a range, the return value will be a new list with the specified items
+# in the below example the range starts at old world ends at risk but only displays
+# old world and heorquest.
+#Example
+
+my_list3 = ["warhammer","40k","old world","heroquest","risk","monopoly"]
+
+print(my_list3[2:4])
+
+
+# By leaving out the start value, the range will start at the first item:
+# example
+# print(my_list3[:4])
+
+# By leaving out the end value, the range will go on to the end of the list:
+# print(my_list3[2:])
